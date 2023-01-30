@@ -1,4 +1,8 @@
 import React from 'react'
+import Navbar from './Navbar'
+import Hero from './Hero'
+import  SearchBox  from './SearchBox'
+import ShowCourt from './ShowCourt'
 
 const styles = {
   color: 'red',
@@ -7,7 +11,12 @@ const styles = {
 
 const App = () => {
   return (
-    <div style={styles}>App is running!</div>
+    <>
+      <Navbar />
+      <Hero />
+      <SearchBox />
+      <ShowCourt />
+    </>
   )
 }
 
