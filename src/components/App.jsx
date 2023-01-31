@@ -4,11 +4,6 @@ import Hero from './Hero'
 import  SearchBox  from './SearchBox'
 import ShowCourt from './ShowCourt'
 
-const styles = {
-  color: 'red',
-  fontSize: '30px'
-}
-
 const App = () => {
   return (
     <>

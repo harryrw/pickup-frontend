@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
     "test": "vitest",
-    "start": "npm preview --host"
+    "start": "npm run dev"
   },
   "dependencies": {
     "react": "^18.2.0",
