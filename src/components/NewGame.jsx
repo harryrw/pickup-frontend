@@ -14,9 +14,14 @@ const GameModal = () => {
             </div>
             <div className="modal-body">
                 <form>
-                    <label for="title">Title</label>
-                    <input type="text" className="form-control"></input>
-                    <br></br>
+                    <label for="title" className="col-form-label-lg">Title</label>
+                    <input type="text" className="form-control form-control-lg"></input>
+                    <br/>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter any details that may be necessary"></textarea>
+                    </div>
+                    <br/>
                     <div className="row">
                         <div className="col">
                             <label for="date">Date</label>
@@ -39,6 +44,7 @@ const GameModal = () => {
                         <div className="col-md-3">
                             <label for="state">State:</label>
                             <select name="state" className="form-select">
+                                <option selected></option>
                                 <option value="ACT">ACT</option>
                                 <option value="NSW">NSW</option>
                                 <option value="NT">NT</option>
@@ -58,12 +64,13 @@ const GameModal = () => {
                         <option value="intermediate">Intermediate</option>
                         <option value="advanced">Advanced</option>
                     </select>
+                    
                 </form>
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 {/* add functionality to the save button */}
-                <button type="button" className="btn btn-primary">Save changes</button>
+                <button type="button" className="btn btn-primary">Register game</button>
             </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import  SearchBox  from './SearchBox'
 import ShowCourt from './ShowCourt'
+import NewGame from './NewGame'
 
 const styles = {
   color: 'red',
@@ -16,6 +17,7 @@ const App = () => {
       <Hero />
       <SearchBox />
       <ShowCourt />
+      <NewGame />
     </>
   )
 }
