@@ -32,7 +32,7 @@ const GameModal = () => {
                             <input type="time" className="form-control"></input>
                         </div>
                     </div>
-                    <br></br>
+                    <br/>
                     <label for="address">Address</label>
                     <input type="text" className="form-control"></input>
                     <br/>
