@@ -9,7 +9,6 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      <SearchBox />
       <ShowCourt />
     </>
   )
