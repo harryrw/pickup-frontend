@@ -1,7 +1,7 @@
 const CourtModal = () => {
     return (
     <div>
-        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add a new court</button>
+        <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">Add a new court</button>
         <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
