@@ -1,12 +1,12 @@
 import React from 'react'
   
-const ShowCourt = () => {
+const ShowCourt = ({ name="Test Name", address="Fawkner Park, 24-88 Commercial Rd, South Yarra VIC 3141", img="/src/assets/court.jpg"}) => {
   return (
-      <div className="card">
-      <img src="" className="card-img-top" alt="..."/>
+    <div className="card" style={{width: '25rem'}}>
+      <img src={img} className="card-img-top" style={{height:'15rem', width: '25rem'}} alt="..."/>
       <div className="card-body">
-        <h5 className="card-title">Fawkner Park Basketball Court</h5>
-        <p className="card-text">Fawkner Park, 24-88, 24-88 Commercial Rd, South Yarra VIC 3141</p>
+        <h5 className="card-title">{name}</h5>
+        <p className="card-text">{address}</p>
       </div>
     </div>      
   )
