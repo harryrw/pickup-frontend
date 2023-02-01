@@ -40,9 +40,9 @@ const CourtModal = () => {
                         </div>
                     </div>
                     <br/>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label for="description">Description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Description of the court(s) - i.e. surface quality, number of hoops, etc."></textarea>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Description of the court(s) - i.e. surface quality, number of hoops, etc."></textarea>
                     </div>
                 </form>
             </div>

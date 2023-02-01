@@ -17,9 +17,9 @@ const GameModal = () => {
                     <label for="title" className="col-form-label-lg">Title</label>
                     <input type="text" className="form-control form-control-lg"></input>
                     <br/>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label for="description">Description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter any details that may be necessary"></textarea>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter any details that may be necessary"></textarea>
                     </div>
                     <br/>
                     <div className="row">
