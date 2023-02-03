@@ -1,4 +1,16 @@
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
+
+// need to finish this form, add addCourt to app.jsx -zac
 const CourtModal = () => {
+    const { state } = useParams()
+    const [court, setCourt] = useState('')
+    
+    function submit(evt) {
+        evt.preventDefault()
+        addCourt(name, address, city, state, description)
+    }
+    
     return (
     <div>
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">Add a new court</button>
@@ -12,7 +24,7 @@ const CourtModal = () => {
                 </button>
             </div>
             <div className="modal-body">
-                <form>
+                <form onSubmit={submit} className="form-group">
                     <label for="courtName" className="col-form-label-lg">Court Name</label>
                     <input type="text" className="form-control form-control-lg"></input>
                     <br/>
