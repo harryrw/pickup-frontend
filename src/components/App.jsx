@@ -6,8 +6,8 @@ import AllCourts from './AllCourts'
 import ShowCourt from './ShowCourt'
 import NewCourt from './NewCourt'
 import NewGame from './NewGame'
-import CourtSelection from './CourtSelection'
 import ShowGame from './ShowGame'
+import GameSelection from './GameSelection'
 
 const seedCourts = [
     { name: 'Hoop St Court',  address: '123 Hoop St', city: 'Bondi', state: 'NSW', description: 'Sydney Court, hoop in good condition, no net' },

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const ShowGame = ({ name = "Game Name", location = "Test Address, 123 Street, Brunswick", skill = "Intermediate" }) => {
-    const [participants, setParticipants] = React.useState(0);
+    const [participants, setParticipants] = useState(0);
   
     const updateCount = (event) => {
         event.preventDefault();
