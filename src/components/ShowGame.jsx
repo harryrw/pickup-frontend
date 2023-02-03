@@ -4,8 +4,9 @@ import React from 'react'
 const ShowGame = ({ name = "Game Name", location = "Test Address, 123 Street, Brunswick", skill = "Intermediate" }) => {
     const [participants, setParticipants] = React.useState(0);
   
-    const updateCount = () => {
-      setParticipants(participants + 1);
+    const updateCount = (event) => {
+        event.preventDefault();
+        setParticipants(participants + 1);
     };
   
     return (
