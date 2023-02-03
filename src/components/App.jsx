@@ -5,12 +5,17 @@ import ShowCourt from './ShowCourt'
 import NewCourt from './NewCourt'
 import NewGame from './NewGame'
 import CourtSelection from './CourtSelection'
+import ShowGame from './ShowGame'
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <div>
+        <p> space</p>
+      </div>
+      <ShowGame />
       {/* <ShowCourt />
       <NewCourt /> 
       <NewGame /> */}
