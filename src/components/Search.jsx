@@ -2,25 +2,18 @@ import React from 'react'
 import SearchBox from './SearchBox'
 import ShowGame from './ShowGame'
 
-const filterGames = (games, query) => {
-    if (!query) {
-        return games
-    }
 
-    return games.filter((game) => {
-        const gameState = game.state.name.toLowerCase()
-        return gameState.includes(query)
-    })
-}
+const Search = ({ games, searchResults, setSearchResults }) => {
+    
+    const results = searchResults.map(game => <ShowGame key={game.id} game={game} />)
 
-const Search = ({ games }) => {
+    const content = results?.length ? results : <h4>Sorry, we couldn't any matching games!</h4>
+
     return (
-        <div>
-            <SearchBox />
+        <div className="container">
+            <SearchBox games={games} setSearchResults={setSearchResults}/>
             <h1>Search Results</h1>
-            {games.map((game) => (
-                <ShowGame key={game.id} game={game} />
-            ))}
+            <main>{content}</main>
         </div>
     )
 }

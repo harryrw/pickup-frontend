@@ -22,6 +22,11 @@ const Navbar = () => {
                 Courts
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link text-warning" to="/search">
+                Search
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

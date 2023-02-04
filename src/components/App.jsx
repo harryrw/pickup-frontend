@@ -9,18 +9,14 @@ import NewGame from './NewGame'
 import ShowGame from './ShowGame'
 import GameSelection from './GameSelection'
 import Search from './Search'
+import SearchBox from './SearchBox'
 
-// dont need anymore, delete when certain -zac
-// const seedCourts = [
-//     { name: 'Hoop St Court',  address: '123 Hoop St', city: 'Bondi', state: 'NSW', description: 'Sydney Court, hoop in good condition, no net' },
-//     { name: 'Quentins court', address: '456 Basket St', city: 'Abbotsford', state: 'VIC', description: 'asphalt, backboard broken' },
-//     { name: 'Sportscenter Court', address: '23 City St', city: 'Hobart', state: 'TAS' }
-// ]
 
 const App = () => {
   const [courts, setCourts] = useState([])
   const [games, setGames] = useState([])
-  const nav = useNavigate() 
+  const [searchResults, setSearchResults] = useState([])
+  // const nav = useNavigate() 
 
 
   useEffect(() => {
@@ -37,6 +33,7 @@ const App = () => {
       const res = await fetch('http://localhost:4001/games')
       const data = await res.json()
       setGames(data)
+      setSearchResults(data)
     } 
     fetchGames()
   }, [])
@@ -60,12 +57,13 @@ const App = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Hero />}/>
+        <Route path="/" element={<Hero  />}/>
+        <Route path="/search" element={<Search games={games} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
         <Route path="/courts" element={<AllCourts courts={courts} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
         <Route path="/games" element={<GameSelection games={games} />}/>
         <Route path="/games/:id" element={<ShowGameWrapper />}/>
-        <Route path="/search" element={<Search games={games} />}/>
+        {/* <Route path="/search" element={<Search games={games} />}/> */}
         {/* <NewCourt /> 
         <NewGame /> */}
       </Routes>

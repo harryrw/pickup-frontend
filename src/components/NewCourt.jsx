@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
 
 // need to finish this form, add addCourt to app.jsx -zac
 const CourtModal = () => {
-    const { state } = useParams()
     const [court, setCourt] = useState('')
     
     function submit(evt) {
