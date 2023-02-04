@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-// need to finish this form, add addCourt to app.jsx -zac
 const NewCourt = ({ addCourt}) => {
     const [name, setName] = useState('')
     const [address, setAddress] = useState('')
@@ -10,8 +9,10 @@ const NewCourt = ({ addCourt}) => {
     
     function submit(evt) {
         evt.preventDefault()
+        console.log("Submitting form with values:", name, address, city, state, description)
         addCourt(name, address, city, state, description)
     }
+    
     
     return (
     <div>
@@ -62,8 +63,7 @@ const NewCourt = ({ addCourt}) => {
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                {/* add functionality to the save button */}
-                <button type="button" className="btn btn-primary">Register court</button>
+                <button type="submit" className="btn btn-primary" onClick={submit}>Register court</button>
             </div>
             </div>
         </div>
