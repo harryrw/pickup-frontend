@@ -26,9 +26,9 @@ const ShowGame = ({ game }) => {
             <p className="card-text" style={{ padding: "1rem" }}>
               Participants: {participants}
             </p>
-            <a onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
+            <button onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
               Join
-            </a>
+            </button>
           </div>
         </div>
       </div>
