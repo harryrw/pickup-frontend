@@ -16,7 +16,7 @@ const ShowGame = ({ game }) => {
           <div className="col-md-6">
             <div className="card-body">
               <h5 className="card-title">{game.title}</h5>
-              <p className="card-text">{game.address}, {game.city}</p>
+              <p className="card-text">{game.address}, {game.city}, {game.state.name}</p>
               <p className="card-text">
                 <small className="card-text">Skill Level: {game.skillLevel}</small>
               </p>

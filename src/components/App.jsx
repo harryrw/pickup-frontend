@@ -8,6 +8,7 @@ import NewCourt from './NewCourt'
 import NewGame from './NewGame'
 import ShowGame from './ShowGame'
 import GameSelection from './GameSelection'
+import Search from './Search'
 
 // dont need anymore, delete when certain -zac
 // const seedCourts = [
@@ -64,6 +65,7 @@ const App = () => {
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
         <Route path="/games" element={<GameSelection games={games} />}/>
         <Route path="/games/:id" element={<ShowGameWrapper />}/>
+        <Route path="/search" element={<Search games={games} />}/>
         {/* <NewCourt /> 
         <NewGame /> */}
       </Routes>
