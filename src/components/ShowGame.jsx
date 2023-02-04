@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import CourtModal from './NewCourt';
 
 
-const ShowGame = ({ name = "Game Name", location = "Test Address, 123 Street, Brunswick", skill = "Intermediate" }) => {
+const ShowGame = ({ game }) => {
     const [participants, setParticipants] = useState(0);
   
     const updateCount = (event) => {
@@ -14,10 +15,10 @@ const ShowGame = ({ name = "Game Name", location = "Test Address, 123 Street, Br
         <div className="row g-0">
           <div className="col-md-6">
             <div className="card-body">
-              <h5 className="card-title">{name}</h5>
-              <p className="card-text">{location}</p>
+              <h5 className="card-title">{game.title}</h5>
+              <p className="card-text">{game.address}, {game.city}</p>
               <p className="card-text">
-                <small className="text-muted">Skill Level: {skill}</small>
+                <small className="card-text">Skill Level: {game.skillLevel}</small>
               </p>
             </div>
           </div>
