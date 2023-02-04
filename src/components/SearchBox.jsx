@@ -12,7 +12,6 @@ const SearchBox = ({ games, setSearchResults}) => {
   return (
   <div className="w-50">
     <form className="mb-3 w-100 text-center d-flex flex-row" action="/search" method="get" onSubmit={handleSubmit}>
-      <label htmlFor="game-search" className="form-label invisible">Search</label>
       <input 
         type="text" 
         id="game-search" 
@@ -22,6 +21,7 @@ const SearchBox = ({ games, setSearchResults}) => {
         placeholder="Search Suburb or State for local games!" 
         />
       <a ><button type="submit" className="btn btn-warning">Search</button></a>
+      <label htmlFor="game-search" className="form-label invisible">Search</label>
     </form>
   </div>
   )

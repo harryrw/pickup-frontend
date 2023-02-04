@@ -9,7 +9,6 @@ const AllCourts = ({ courts }) => {
         {courts.map((court, index) => ( 
             <div key={index}>    
                 <Link to={`/courts/${index}`} className="text-reset text-decoration-none"><ShowCourt court={court}/></Link>
-                {/* <ShowCourt court={court}/> */}
             </div>
         ))}
     </>
