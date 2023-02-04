@@ -53,6 +53,29 @@ const App = () => {
     return the_game ? <ShowGame game={the_game}/> : <h4>Sorry, we can't find that game!</h4>
   }
 
+  // Add new court IN PROGRESS
+  const addCourt = async (name, address, city, state, description) => {
+    const newCourt = {
+      name: name,
+      address: address,
+      city: city,
+      state: state,
+      description: description
+    }
+    // Post new court to API
+    const returnedCourt = await fetch("http://localhost:4001/courts/", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newCourt)
+    })
+    const data = await returnedCourt.json()
+    setCourts([...courts, data])
+  }
+
+
   return (
     <>
       <Navbar />
@@ -60,6 +83,7 @@ const App = () => {
         <Route path="/" element={<Hero  />}/>
         <Route path="/search" element={<Search games={games} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
         <Route path="/courts" element={<AllCourts courts={courts} />}/>
+        <Route path="/courts/new" element={<NewCourt addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
         <Route path="/games" element={<GameSelection games={games} />}/>
         <Route path="/games/:id" element={<ShowGameWrapper />}/>
