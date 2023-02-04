@@ -61,11 +61,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Hero />}/>
         <Route path="/courts" element={<AllCourts courts={courts} />}/>
+        <Route path="/courts/new" element={<NewCourt />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
         <Route path="/games" element={<GameSelection games={games} />}/>
         <Route path="/games/:id" element={<ShowGameWrapper />}/>
-        {/* <NewCourt /> 
-        <NewGame /> */}
       </Routes>
     </>
 
