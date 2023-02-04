@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 
 // need to finish this form, add addCourt to app.jsx -zac
-const CourtModal = () => {
-    const [court, setCourt] = useState('')
+const NewCourt = ({ addCourt}) => {
+    const [name, setName] = useState('')
+    const [address, setAddress] = useState('')
+    const [city, setCity] = useState('')
+    const [state, setState] = useState('')
+    const [description, setDescription] = useState('')
     
     function submit(evt) {
         evt.preventDefault()
@@ -24,19 +28,19 @@ const CourtModal = () => {
             <div className="modal-body">
                 <form onSubmit={submit} className="form-group">
                     <label for="courtName" className="col-form-label-lg">Court Name</label>
-                    <input type="text" className="form-control form-control-lg"></input>
+                    <input type="text" className="form-control form-control-lg" value={name} onChange={(evt) => setName(evt.target.value)} ></input>
                     <br/>
                     <label for="address">Address</label>
-                    <input type="text" className="form-control"></input>
+                    <input type="text" className="form-control" value={address} onChange={(evt) => setAddress(evt.target.value)}></input>
                     <br/>
                     <div className="row">
                         <div className="col">
                             <label for="city">City</label>
-                            <input type="text" className="form-control"></input>
+                            <input type="text" className="form-control" value={city} onChange={(evt) => setCity(evt.target.value)}></input>
                         </div>
                         <div className="col-md-3">
                             <label for="state">State:</label>
-                            <select name="state" className="form-select">
+                            <select name="state" className="form-select" value={state} onChange={(evt) => setState(evt.target.value)}>
                                 <option selected></option>
                                 <option value="ACT">ACT</option>
                                 <option value="NSW">NSW</option>
@@ -52,7 +56,7 @@ const CourtModal = () => {
                     <br/>
                     <div className="form-group">
                         <label for="description">Description</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Description of the court(s) - i.e. surface quality, number of hoops, etc."></textarea>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Description of the court(s) - i.e. surface quality, number of hoops, etc." value={description} onChange={(evt) => setDescription(evt.target.value)}></textarea>
                     </div>
                 </form>
             </div>
@@ -68,4 +72,4 @@ const CourtModal = () => {
     )
 }
 
-export default CourtModal
+export default NewCourt
