@@ -83,6 +83,7 @@ const App = () => {
         <Route path="/" element={<Hero  />}/>
         <Route path="/search" element={<Search games={games} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
         <Route path="/courts" element={<AllCourts courts={courts} />}/>
+        <Route path="/courts/state/:state" element={<AllCourts courts={courts} />}/>
         <Route path="/courts/new" element={<NewCourt addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
         <Route path="/games" element={<GameSelection games={games} />}/>
