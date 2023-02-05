@@ -114,10 +114,6 @@ const App = () => {
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/new" element={<NewCourt addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
-        {/* <Route path="/games" element={<GameSelection games={games} />}/> */}
-        {/* <Route path="/search" element={<Search games={games} />}/> */}
-        {/* <NewCourt /> 
-        <NewGame /> */}
       </Routes>
     </>
 
