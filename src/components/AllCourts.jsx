@@ -4,7 +4,7 @@ import ShowCourt from './ShowCourt'
 import CourtStateSelector from './CourtStateSelector'
 import NewCourt from './NewCourt'
 
-const AllCourts = ({ courts }) => {
+const AllCourts = ({ courts, addCourt }) => {
   const [filteredCourts, setFilteredCourts] = useState([]);
   const { state } = useParams();
 
@@ -23,7 +23,7 @@ const AllCourts = ({ courts }) => {
       <div className="container-lg d-flex flex-row justify-content-around bg-light">
         <h2>All Courts</h2>
         <CourtStateSelector />
-        <NewCourt />
+        <NewCourt addCourt={addCourt}/>
       </div>
       {filteredCourts.map((court, index) => ( 
         <div className="col-6 mb-3" key={index}>    

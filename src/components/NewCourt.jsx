@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const NewCourt = ({ addCourt}) => {
+const NewCourt = ({ addCourt }) => {
     const [name, setName] = useState('')
     const [address, setAddress] = useState('')
     const [city, setCity] = useState('')
