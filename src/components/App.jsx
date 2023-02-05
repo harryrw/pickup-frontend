@@ -10,6 +10,7 @@ import ShowGame from './ShowGame'
 import GameSelection from './GameSelection'
 import Search from './Search'
 import SearchBox from './SearchBox'
+import Admin from './Admin'
 
 
 const App = () => {
@@ -114,6 +115,7 @@ const App = () => {
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/new" element={<NewCourt addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
+        <Route path="/admin" element={<Admin />}/>
       </Routes>
     </>
 
