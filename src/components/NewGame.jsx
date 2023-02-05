@@ -1,5 +1,6 @@
-// Button trigger
-const GameModal = () => {
+import React, { useState } from 'react'
+
+const NewGame = () => {
     return (
     <div>
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Register a new game</button>
@@ -79,4 +80,4 @@ const GameModal = () => {
     )
 }
 
-export default GameModal
+export default NewGame
