@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PasswordProtectedPage = () => {
+const Admin = () => {
     const [password, setPassword] = useState("");
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -14,6 +14,23 @@ const PasswordProtectedPage = () => {
             setErrorMessage("Incorrect password, please try again");
         }
     };
+
+    const updateGame = (event) => {
+
+    }
+
+    const deleteGame = (event) => {
+
+    }
+
+    const updateCourt = (event) => {
+
+    }
+
+    const deleteCourt = (event) => {
+
+    }
+
 
     return (
         <div>
@@ -29,14 +46,14 @@ const PasswordProtectedPage = () => {
             ) : (
                 <div>
                     <h1>With great admin power comes great admin responsibility</h1>
-                    <button>Update Game</button>
-                    <button>Delete Game</button>
-                    <button>Update Court</button>
-                    <button>Delete Court</button>
+                    <button onClick={updateGame}>Update Game</button>
+                    <button onClick={deleteGame}>Delete Game</button>
+                    <button onClick={updateCourt}>Update Court</button>
+                    <button onClick={deleteCourt}>Delete Court</button>
                 </div>
             )}
         </div>
     );
 };
 
-export default PasswordProtectedPage;
+export default Admin
