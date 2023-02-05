@@ -7,7 +7,7 @@ const NewGame = ({ addGame }) => {
     const [state, setState] = useState('')
     const [time, setTime] = useState('')
     const [date, setDate] = useState('')
-    const [skillLevel, setSkillLevel] = useState('')
+    const [skillLevel, setSkillLevel] = useState('any')
     const [description, setDescription] = useState('')
 
     function submit(evt) {
