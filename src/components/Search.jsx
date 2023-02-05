@@ -4,7 +4,7 @@ import ShowGame from './ShowGame'
 import { Link } from 'react-router-dom'
 
 
-const Search = ({ games, searchResults, setSearchResults }) => {
+const SearchGames = ({ games, searchResults, setSearchResults }) => {
     
 
     const results = searchResults.map((game, index) => (
@@ -24,4 +24,4 @@ const Search = ({ games, searchResults, setSearchResults }) => {
     )
 }
 
-export default Search
+export default SearchGames
