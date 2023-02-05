@@ -53,7 +53,7 @@ const App = () => {
     return the_game ? <ShowGame game={the_game}/> : <h4>Sorry, we can't find that game!</h4>
   }
 
-  // Add new court IN PROGRESS
+  // Add new court
   const addCourt = async (name, address, city, state, description) => {
     const newCourt = {
       name: name,
@@ -62,7 +62,7 @@ const App = () => {
       state: state,
       description: description
     }
-    // Post new court to API
+    // Post new court to DB
     const returnedCourt = await fetch("http://localhost:4001/courts/", {
       method: "POST",
       headers: {
@@ -75,6 +75,32 @@ const App = () => {
     setCourts([...courts, data])
   }
 
+  // Add new game
+  const addGame = async (title, address, city, state, time, date, skillLevel, description) => {
+    const newGame = {
+      title: title,
+      address: address,
+      city: city,
+      state: state,
+      time: time,
+      date: date,
+      skillLevel: skillLevel,
+      description: description,
+    }
+    // Post new game to DB
+    const returnedGame = await fetch("http://localhost:4001/games/", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newGame)
+    })
+    const data = await returnedGame.json()
+    setGames([...games, data])
+  }
+
+
 
   return (
     <>
@@ -83,14 +109,11 @@ const App = () => {
         <Route path="/" element={<Hero  />}/>
         <Route path="/games" element={<Search games={games} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
         <Route path="/games/:id" element={<ShowGameWrapper />}/>
+        <Route path="/games/new" element={<NewGame addGame={addGame} />}/>
         <Route path="/courts" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/new" element={<NewCourt addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
-        {/* <Route path="/games" element={<GameSelection games={games} />}/> */}
-        {/* <Route path="/search" element={<Search games={games} />}/> */}
-        {/* <NewCourt /> 
-        <NewGame /> */}
       </Routes>
     </>
 
