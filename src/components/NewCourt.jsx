@@ -11,6 +11,8 @@ const NewCourt = ({ addCourt }) => {
         evt.preventDefault()
         console.log("Submitting form with values:", name, address, city, state, description)
         addCourt(name, address, city, state, description)
+        alert('Court successfully submitted!')
+        window.location.href = '/courts'
     }
     
     
@@ -63,7 +65,7 @@ const NewCourt = ({ addCourt }) => {
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" className="btn btn-primary" onClick={submit}>Register court</button>
+                <button type="submit" className="btn btn-primary" onClick={submit} data-bs-dismiss="modal">Register court</button>
             </div>
             </div>
         </div>

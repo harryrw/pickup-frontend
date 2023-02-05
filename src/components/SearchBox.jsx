@@ -5,10 +5,15 @@ const SearchBox = ({ games, setSearchResults}) => {
 
   const handleSeachChange = (e) => {
     if (!e.target.value) return setSearchResults(games)
-    const gameResultsArray = games.filter(game => game.state.includes(e.target.value) || game.city.includes(e.target.value))
-    setSearchResults(gameResultsArray) || games.filter(game => game.description.includes(e.target.value)) || games.filter(game => game.name.includes(e.target.value))
+    const lowercaseValue = e.target.value.toLowerCase()
+    const gameSearchResultsArray = games.filter(game => 
+      Object.values(game)
+        .map(value => value.toString().toLowerCase())
+        .some(value => value.includes(lowercaseValue))
+    )
+    setSearchResults(gameSearchResultsArray)
   }
-
+  
   return (
   <div className="w-75">
     <form className="mb-3 w-100 d-flex flex-row" action="/search" method="get" onSubmit={handleSubmit}>
