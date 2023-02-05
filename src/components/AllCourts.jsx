@@ -5,23 +5,26 @@ import CourtStateSelector from './CourtStateSelector'
 import NewCourt from './NewCourt'
 
 const AllCourts = ({ courts, addCourt }) => {
-  const [filteredCourts, setFilteredCourts] = useState([]);
-  const { state } = useParams();
+  const [filteredCourts, setFilteredCourts] = useState([])
+  const { state } = useParams()
+  const [title, setTitle] = useState("All Courts")
 
   useEffect(() => {
-    const lowerCaseState = state ? state.toLowerCase() : state;
+    const lowerCaseState = state ? state.toLowerCase() : state
     if (lowerCaseState) {
-      setFilteredCourts(courts.filter(court => court.state.toLowerCase() === lowerCaseState));
+      setFilteredCourts(courts.filter(court => court.state.toLowerCase() === lowerCaseState))
+      setTitle(`${state.toUpperCase()}`)
     } else {
-      setFilteredCourts(courts);
+      setFilteredCourts(courts)
+      setTitle("All Courts")
     }
-  }, [state, courts]);
+  }, [state, courts])
 
   return (
     <>
     <div className="container-lg bg-light d-md-flex flex-column flex-wrap align-items-center pt-2" >
       <div className="container-lg d-flex flex-row justify-content-around bg-light">
-        <h2>All Courts</h2>
+        <h2>{title}</h2>
         <CourtStateSelector />
         <NewCourt addCourt={addCourt}/>
       </div>
