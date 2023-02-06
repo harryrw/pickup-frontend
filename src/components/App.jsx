@@ -7,10 +7,9 @@ import ShowCourt from './ShowCourt'
 import NewCourt from './NewCourt'
 import NewGame from './NewGame'
 import ShowGame from './ShowGame'
-import GameSelection from './GameSelection'
 import Search from './Search'
-import SearchBox from './SearchBox'
-import Admin from './Admin'
+
+
 
 
 const App = () => {
