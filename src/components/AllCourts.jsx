@@ -28,11 +28,13 @@ const AllCourts = ({ courts, addCourt }) => {
         <CourtStateSelector />
         <NewCourt addCourt={addCourt}/>
       </div>
+      <div className="container d-flex flex-wrap">
       {filteredCourts.map((court, index) => ( 
-        <div className="col-6 mb-3" key={index}>    
+        <div className="col-lg-6 mb-3" key={index}>    
             <Link to={`/courts/${index}`} className="text-reset text-decoration-none"><ShowCourt court={court}/></Link>
           </div>
         ))}
+      </div>
     </div>
     </>
   )
