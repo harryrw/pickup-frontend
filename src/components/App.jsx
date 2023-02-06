@@ -7,7 +7,7 @@ import ShowCourt from './ShowCourt'
 import NewCourt from './NewCourt'
 import NewGame from './NewGame'
 import ShowGame from './ShowGame'
-import Search from './Search'
+import GameSearch from './GameSearch'
 
 
 
@@ -107,16 +107,13 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero  />}/>
-        <Route path="/games" element={<Search games={games} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
+        <Route path="/games" element={<GameSearch games={games} addGame={addGame} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
         <Route path="/games/:id" element={<ShowGameWrapper />}/>
-        <Route path="/games/new" element={<NewGame addGame={addGame} />}/>
         <Route path="/courts" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
-        <Route path="/courts/new" element={<NewCourt addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
       </Routes>
     </>
-
   )
 }
 

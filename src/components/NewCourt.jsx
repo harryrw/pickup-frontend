@@ -19,7 +19,7 @@ const NewCourt = ({ addCourt }) => {
     return (
     <div>
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">Add a new court</button>
-        <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
             <div className="modal-header">
@@ -30,19 +30,19 @@ const NewCourt = ({ addCourt }) => {
             </div>
             <div className="modal-body">
                 <form onSubmit={submit} className="form-group">
-                    <label for="courtName" className="col-form-label-lg">Court Name</label>
+                    <label htmlFor="courtName" className="col-form-label-lg">Court Name</label>
                     <input type="text" className="form-control form-control-lg" value={name} onChange={(evt) => setName(evt.target.value)} ></input>
                     <br/>
-                    <label for="address">Address</label>
+                    <label htmlFor="address">Address</label>
                     <input type="text" className="form-control" value={address} onChange={(evt) => setAddress(evt.target.value)}></input>
                     <br/>
                     <div className="row">
                         <div className="col">
-                            <label for="city">City</label>
+                            <label htmlFor="city">City</label>
                             <input type="text" className="form-control" value={city} onChange={(evt) => setCity(evt.target.value)}></input>
                         </div>
                         <div className="col-md-3">
-                            <label for="state">State:</label>
+                            <label htmlFor="state">State:</label>
                             <select name="state" className="form-select" value={state} onChange={(evt) => setState(evt.target.value)}>
                                 <option selected></option>
                                 <option value="ACT">ACT</option>
@@ -58,7 +58,7 @@ const NewCourt = ({ addCourt }) => {
                     </div>
                     <br/>
                     <div className="form-group">
-                        <label for="description">Description</label>
+                        <label htmlFor="description">Description</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Description of the court(s) - i.e. surface quality, number of hoops, etc." value={description} onChange={(evt) => setDescription(evt.target.value)}></textarea>
                     </div>
                 </form>
