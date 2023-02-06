@@ -2,9 +2,10 @@ import React from 'react'
 import SearchBox from './SearchBox'
 import ShowGame from './ShowGame'
 import { Link } from 'react-router-dom'
+import NewGame from './NewGame'
 
 
-const SearchGames = ({ games, searchResults, setSearchResults }) => {
+const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     
 
     const results = searchResults.map((game, index) => (
@@ -21,7 +22,8 @@ const SearchGames = ({ games, searchResults, setSearchResults }) => {
         <div className="container">
             <div className="mt-2 d-flex justify-content-between">
                 <h1>Games</h1>
-                <SearchBox games={games} setSearchResults={setSearchResults}/>
+                <SearchBox games={games} setSearchResults={setSearchResults}/>    
+                <NewGame addGame={addGame} />
             </div>
             <main className="container d-flex flex-wrap">
                 {content}
