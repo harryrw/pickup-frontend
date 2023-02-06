@@ -8,18 +8,24 @@ const SearchGames = ({ games, searchResults, setSearchResults }) => {
     
 
     const results = searchResults.map((game, index) => (
-    <Link to={`/games/${index}`} className="text-reset text-decoration-none">
-        <ShowGame key={index} game={game} />
-    </Link>
+    <div className="col-lg-6 mb-3" key={index}>
+        <Link to={`/games/${index}`} className="text-reset text-decoration-none">
+            <ShowGame game={game} />
+        </Link>
+    </div>
     ))
 
     const content = results?.length ? results : <h4>Sorry, we couldn't any matching games!</h4>
 
     return (
         <div className="container">
-            <SearchBox games={games} setSearchResults={setSearchResults}/>
-            <h1>Games</h1>
-            <main>{content}</main>
+            <div className="mt-2 d-flex justify-content-between">
+                <h1>Games</h1>
+                <SearchBox games={games} setSearchResults={setSearchResults}/>
+            </div>
+            <main className="container d-flex flex-wrap">
+                {content}
+            </main>
         </div>
     )
 }

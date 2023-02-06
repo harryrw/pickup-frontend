@@ -10,7 +10,7 @@ const ShowGame = ({ game }) => {
     };
   
     return (
-      <div className="card mb-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
+      <div className="card min-w-75 m-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
         <div className="row g-0">
           <div className="col-md-6">
             <div className="card-body">
