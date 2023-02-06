@@ -8,7 +8,7 @@ import NewCourt from './NewCourt'
 import NewGame from './NewGame'
 import ShowGame from './ShowGame'
 import GameSearch from './GameSearch'
-
+import Admin from './Admin'
 
 
 
@@ -112,6 +112,7 @@ const App = () => {
         <Route path="/courts" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
+        <Route path="/admin" element={<Admin />}/>
       </Routes>
     </>
   )
