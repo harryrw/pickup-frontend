@@ -61,7 +61,7 @@ const NewGame = ({ addGame }) => {
                         <div className="col-md-3">
                             <label htmlFor="state">State:</label>
                             <select name="state" className="form-select" value={state} onChange={(evt) => setState(evt.target.value)}>
-                                <option selected></option>
+                                <option defaultValue=""></option>
                                 <option value="ACT">ACT</option>
                                 <option value="NSW">NSW</option>
                                 <option value="NT">NT</option>
