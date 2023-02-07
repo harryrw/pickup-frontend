@@ -26,11 +26,11 @@ const ShowGameSingle = ({ game }) => {
             </div>
           </div>
           <div className="col-md-6" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <p>
+            <p style={{paddingTop: "1rem"}}>
                 {game.description}
             </p>
-            <p className="card-text" style={{ padding: "1rem" }}>
-              Participants: {participants}
+            <p className="card-text" style={{ padding: "0.5rem" }}>
+              Participants: {game.participants}
             </p>
             {!isClicked ? (
                 <button onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
