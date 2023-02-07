@@ -1,30 +1,31 @@
 import React, { useState } from 'react'
 
-
-const ShowGameSingle = ({ game }) => {
+const ShowGameSingle2 = ({ updateGame, game }) => {
+    const [title, setTitle] = useState(game.title)
+    const [address, setAddress] = useState(game.address)
+    const [city, setCity ] = useState(game.city)
+    const [state, setState] = useState(game.state)
+    const [time, setTime] = useState(game.time)
+    const [date, setDate] = useState(game.date)
+    const [skillLevel, setSkillLevel] = useState(game.skillLevel)
+    const [description, setDescription] = useState(game.description)
     const [participants, setParticipants] = useState(game.participants)
+    const [_id, setId] = useState(game._id)
     const [isClicked, setIsClicked] = useState(false)
-    const title = useState(game.title)
-    const address = useState(game.address)
-    const city = useState(game.city)
-    const state = useState(game.state)
-    const time = useState(game.time)
-    const date = useState(game.date)
-    const skillLevel = useState(game.skillLevel)
-    const description= useState(game.description)
 
-
-  function updateCount(event) {
-      event.preventDefault()
-      if (!isClicked) {
-          setParticipants(game.participants + 1)
-          setIsClicked(true)
-        }
-        game(title, address, city, state, time, date, skillLevel, description)
-  }
+    function updateCount(evt) {
+        evt.preventDefault()
+        if (!isClicked) {
+            setParticipants(participants + 1)
+            setIsClicked(true)
+            console.log(_id)
+          }        
+        updateGame(_id, title, address, city, state, time, date, skillLevel, description, participants)
+        
+    }
 
     return (
-      <div className="card mb-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
+        <div className="card mb-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
         <div className="row g-0">
           <div className="col-md-6">
             <div className="card-body">
@@ -52,7 +53,7 @@ const ShowGameSingle = ({ game }) => {
           </div>
         </div>
       </div>
-    )
+    );
 }
 
-export default ShowGameSingle
+export default ShowGameSingle2
