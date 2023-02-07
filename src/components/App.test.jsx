@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom"
-import { render, screen, waitFor } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import userEvent from "@testing-library/user-event"
 import App from "./App"
@@ -36,12 +36,14 @@ describe('App component', () => {
         expect(container.querySelector("h2")).toHaveTextContent("All Courts")
     })
 
-    // courts page test, changes available courts based on state
+    // courts page test, changes available courts based on state, then navigates back to home
     it('Shows the the name of the selected state when a state has been selected on the court listing page.', async () => {
         await userEvent.click(screen.getByText("Courts"))
         await userEvent.click(screen.getByRole("link", { name: "VIC" }))
         expect(container.querySelector("h2")).toBeDefined()
         expect(container.querySelector("h2")).toHaveTextContent("VIC")
+        await userEvent.click(screen.getByText("PickUp"))
+        expect(container.querySelector("h2")).toHaveTextContent("Pick Up")
     })
 })
 
