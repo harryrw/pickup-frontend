@@ -10,7 +10,6 @@ import ShowGame from './ShowGame'
 import GameSearch from './GameSearch'
 import Admin from './Admin'
 import ShowGameSingle from './ShowGameSingle'
-import ShowGameSingle2 from './ShowGameSingle2'
 
 
 
@@ -58,7 +57,7 @@ const App = () => {
   // HOC - for update game
   const UpdateGameWrapper = ({ id, updateGame }) => {
     const the_game = games.find(game => game.id === id)
-    return the_game ? <ShowGameSingle2 game={the_game} updateGame={updateGame} /> : <h4>Sorry, we can't find that game!</h4>
+    return the_game ? <ShowGameSingle game={the_game} updateGame={updateGame} /> : <h4>Sorry, we can't find that game!</h4>
   }
   
 
@@ -109,41 +108,13 @@ const App = () => {
     setGames([...games, data])
   }
 
-  // Update participants
-  const updateGame = async (id, title, address, city, state, time, date, skillLevel, description, participants) => {
-    const gameUpdated = {
-      title: title,
-      address: address,
-      city: city,
-      state: state,
-      time: time,
-      date: date,
-      skillLevel: skillLevel,
-      description: description,
-      participants: participants
-    }
-    // Update game in db
-    const returnedGameUpdate = await fetch(`http://localhost:4001/games/${id}`, {
-      method: "PUT", 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(gameUpdated)
-    })
-    const data = await returnedGameUpdate.json()
-    setGames([...games, ...searchResults.filter(game => game.id !== id), data])
-  }
-
-
-
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero  />}/>
         <Route path="/games" element={<GameSearch games={games} addGame={addGame} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
-        <Route path="/games/:id" element={<UpdateGameWrapper games={games} updateGame={updateGame} />}/>
+        <Route path="/games/:id" element={<ShowGameWrapper/>}/>
         <Route path="/courts" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
