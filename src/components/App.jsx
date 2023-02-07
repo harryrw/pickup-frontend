@@ -9,6 +9,7 @@ import NewGame from './NewGame'
 import ShowGame from './ShowGame'
 import GameSearch from './GameSearch'
 import Admin from './Admin'
+import ShowGameSingle from './ShowGameSingle'
 
 
 
@@ -50,7 +51,7 @@ const App = () => {
   const ShowGameWrapper = () => {
     const { id } = useParams()
     const the_game = games[id]
-    return the_game ? <ShowGame game={the_game}/> : <h4>Sorry, we can't find that game!</h4>
+    return the_game ? <ShowGameSingle game={the_game}/> : <h4>Sorry, we can't find that game!</h4>
   }
 
   // Add new court
