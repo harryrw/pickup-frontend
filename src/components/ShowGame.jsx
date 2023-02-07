@@ -2,13 +2,10 @@ import React, { useState } from 'react'
 
 
 const ShowGame = ({ game }) => {
-    const [participants, setParticipants] = useState(0);
-  
-    const updateCount = (event) => {
-        event.preventDefault();
-        setParticipants(participants + 1);
-    };
-  
+
+    const gameDate = game.date.substring(0, 10).split("-")
+    const dateOrder = `${gameDate[2]}-${gameDate[1]}-${gameDate[0]}`
+
     return (
       <div className="card min-w-75 m-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
         <div className="row g-0">
@@ -23,11 +20,11 @@ const ShowGame = ({ game }) => {
           </div>
           <div className="col-md-6" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <p className="card-text" style={{ padding: "1rem" }}>
-              Participants: {participants}
+              Time: {game.time}
             </p>
-            <button onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
-              Join
-            </button>
+            <p className="card-text" style={{ padding: "1rem" }}>
+              Date: {dateOrder}
+            </p>
           </div>
         </div>
       </div>
