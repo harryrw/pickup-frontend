@@ -54,13 +54,6 @@ const App = () => {
     return the_game ? <ShowGameSingle game={the_game}/> : <h4>Sorry, we can't find that game!</h4>
   }
 
-  // HOC - for update game
-  const UpdateGameWrapper = ({ id, updateGame }) => {
-    const the_game = games.find(game => game.id === id)
-    return the_game ? <ShowGameSingle game={the_game} updateGame={updateGame} /> : <h4>Sorry, we can't find that game!</h4>
-  }
-  
-
   // Add new court
   const addCourt = async (name, address, city, state, description) => {
     const newCourt = {
