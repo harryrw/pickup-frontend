@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest --legacy-peer-deps",
-    "start": "npm run dev --legacy-peer-deps"
+    "test": "vitest",
+    "start": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
