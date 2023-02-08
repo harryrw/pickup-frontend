@@ -4,18 +4,15 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import AllCourts from './AllCourts'
 import ShowCourt from './ShowCourt'
-import ShowGame from './ShowGame'
 import GameSearch from './GameSearch'
 import Admin from './Admin'
 import ShowGameSingle from './ShowGameSingle'
-
 
 
 const App = () => {
   const [courts, setCourts] = useState([])
   const [games, setGames] = useState([])
   const [searchResults, setSearchResults] = useState([])
-  // const nav = useNavigate() 
 
 
   useEffect(() => {
@@ -86,6 +83,7 @@ const App = () => {
       skillLevel: skillLevel,
       description: description,
     }
+    
     // Post new game to DB
     const returnedGame = await fetch("http://pickup-api-production.up.railway.app/games/", {
       method: "POST",
