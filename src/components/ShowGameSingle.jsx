@@ -30,7 +30,7 @@ const ShowGameSingle = ({ game }) => {
       <>
       <Navbar />
       <div className="game-card-container" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh", fontSize:"2rem"}}>
-        <div className="card mb-3 text-warning bg-dark" style={{ border: "2px solid #ffc107", borderRadius: "20px" }}>
+        <div className="card mb-3 text-warning" style={{ border: "2px solid #ffc107", borderRadius: "20px", backgroundColor: "#383F45" }}>
           <div className="row g-0">
             <div className="col-md-6">
               <div className="card-body">
