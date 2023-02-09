@@ -24,8 +24,8 @@ const AllCourts = ({ courts, addCourt }) => {
   return (
     <>
     <Navbar />
-    <div className="container-lg bg-light d-md-flex flex-column flex-wrap align-items-center pt-2" >
-      <div className="container-lg d-flex flex-row justify-content-around bg-light">
+    <div className="container-lg d-md-flex flex-column flex-wrap align-items-center pt-2 text-warning" >
+      <div className="container-lg d-flex flex-row justify-content-around" >
         <h2>{title}</h2>
         <CourtStateSelector />
         <NewCourt addCourt={addCourt}/>

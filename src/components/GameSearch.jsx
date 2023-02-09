@@ -22,7 +22,7 @@ const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
         <Navbar />
         <div className="container" style={{ backgroundColor: "#212529" }}>
             <div className="mt-2 d-flex justify-content-between">
-                <h1>Games</h1>
+                <h1 className="text-warning">Games</h1>
                 <SearchBox games={games} setSearchResults={setSearchResults}/>    
                 <NewGame addGame={addGame} />
             </div>
