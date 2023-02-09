@@ -7,7 +7,6 @@ import Navbar from './Navbar'
 
 const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     
-
     const results = searchResults.map((game, index) => (
     <div className="col-lg-6 mb-3" key={index}>
         <Link to={`/games/${index}`} className="text-reset text-decoration-none">
@@ -21,7 +20,7 @@ const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     return (
         <>
         <Navbar />
-        <div className="container">
+        <div className="container" style={{ backgroundColor: "rgb(26, 26, 26)" }}>
             <div className="mt-2 d-flex justify-content-between">
                 <h1>Games</h1>
                 <SearchBox games={games} setSearchResults={setSearchResults}/>    
