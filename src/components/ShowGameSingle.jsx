@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Navbar from './Navbar'
 
 const ShowGameSingle = ({ game }) => {
     const [participants, setParticipants] = useState(game.participants)
@@ -24,6 +24,8 @@ const ShowGameSingle = ({ game }) => {
   }
 
     return (
+      <>
+      <Navbar />
       <div className="card mb-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
         <div className="row g-0">
           <div className="col-md-6">
@@ -43,15 +45,16 @@ const ShowGameSingle = ({ game }) => {
               Participants: {participants}
             </p>
             {!isClicked ? (
-                <button onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
+              <button onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
                     Join
                 </button>
             ) : (
-                <p>You're in the game!</p>
-            )}
+              <p>You're in the game!</p>
+              )}
           </div>
         </div>
       </div>
+      </>
     )
 }
 

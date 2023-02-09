@@ -3,7 +3,7 @@ import SearchBox from './SearchBox'
 import ShowGame from './ShowGame'
 import { Link } from 'react-router-dom'
 import NewGame from './NewGame'
-
+import Navbar from './Navbar'
 
 const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     
@@ -19,6 +19,8 @@ const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     const content = results?.length ? results : <h4>Sorry, we couldn't any matching games!</h4>
 
     return (
+        <>
+        <Navbar />
         <div className="container">
             <div className="mt-2 d-flex justify-content-between">
                 <h1>Games</h1>
@@ -29,6 +31,7 @@ const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
                 {content}
             </main>
         </div>
+        </>
     )
 }
 

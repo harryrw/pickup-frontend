@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Navbar from './Navbar'
 
 const Admin = () => {
     const [password, setPassword] = useState("")
@@ -36,6 +37,8 @@ const Admin = () => {
     }
 
     return (
+        <>
+        <Navbar />
         <div>
             {!isAuthenticated ? (
                 <form onSubmit={handleSubmit}>
@@ -65,6 +68,7 @@ const Admin = () => {
                 </div>
             )}
         </div>
+        </>
     )
 }
 
