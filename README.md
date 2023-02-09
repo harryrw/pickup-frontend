@@ -81,10 +81,14 @@ Task delegation was determined and discussed in our morning meetings. Being a gr
 
 ---
 
-## Production Testing
+## User Production Testing
 
 ---
 
-## Development Testing
+## User Development Testing
+
+As the API was being devloped, user testing was conducted using the API platform -  Postman. Postman allows the developer to conduct API testing by sending HTTP requests to the API, and receive the relative requests from it. Status codes and error messages were used to identify any issues with the API. Several issues were resolved using the Postman platform, and the API was tested using Postman throughout the development of the application. The following is a link to the Postman collection: 
+
+[Postman Collection]()
 
 ---
