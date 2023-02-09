@@ -1,8 +1,11 @@
 # PickUp - Basketball Game Finder
 
 LINK TO WEBSITE  
-LINK TO API GITHUB  
-LINK TO REACT GITHUB
+
+
+## [Back-end API Github link](https://github.com/ZacharyHLong/pickup-api)
+
+## [Front-end React Github link](https://github.com/harryrw/pickup-frontend)
 
 ## Description
 
@@ -76,6 +79,12 @@ INSERT FOLDER OF PICS
 
 Task delegation was determined and discussed in our morning meetings. Being a group of two people, and both with an interest on all aspects of a full-stack application, we decided to keep the task delegation relatively flexible and adaptive. On initialising the application we each set up either the front-end (Harry) or back-end (Zac), with Harry expressing more of an interest in front-end work and Zac in the back-end work. As the project progressed, we both needed to work on all aspects of the project, but many tasks were delegated in accordance with the initial division of work. Harry worked on many of the front-end components and styling, whilst making back-end changes when necessary. Zac developed the back-end API, and designed a few front-end components. Several life events out of our control (i.e. job interviews and health) affected our task delegation, with the group member not affected by any life events taking charge of the current sprint. Tasks were assigned in Trello, but with a lot flexiblity in the delegation of tasks there was quite a bit of overlap. For any tasks that either of us were struggling with, we would either meet in person, or screen share on discord to troubleshoot the issue.
 
+---
+
 ## Production Testing
 
+---
+
 ## Development Testing
+
+---
