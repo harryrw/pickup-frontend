@@ -7,7 +7,7 @@ const ShowGame = ({ game }) => {
     const dateOrder = `${gameDate[2]}-${gameDate[1]}-${gameDate[0]}`
 
     return (
-      <div className="card min-w-75 m-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
+      <div className="card min-w-75 m-3 text-warning bg-dark" style={{ maxWidth: "540px", border: "2px solid #ffc107", borderRadius: "20px" }}>
         <div className="row g-0">
           <div className="col-md-6">
             <div className="card-body">

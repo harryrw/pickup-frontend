@@ -7,6 +7,7 @@ import ShowCourt from './ShowCourt'
 import GameSearch from './GameSearch'
 import Admin from './Admin'
 import ShowGameSingle from './ShowGameSingle'
+import ShowCourtSingle from './ShowCourtSingle'
 
 
 const App = () => {
@@ -41,7 +42,7 @@ const App = () => {
   const ShowCourtWrapper = () => {
     const { id } = useParams()
     const the_court = courts[id]
-    return the_court ? <ShowCourt court={the_court}/> : <h4>Court doesn't exist!</h4>
+    return the_court ? <ShowCourtSingle court={the_court}/> : <h4>Court doesn't exist!</h4>
   }
 
   // HOC - for game
@@ -103,7 +104,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Hero  />}/>
         <Route path="/games" element={<GameSearch games={games} addGame={addGame} searchResults={searchResults} setSearchResults={setSearchResults} />}/>

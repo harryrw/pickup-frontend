@@ -3,11 +3,10 @@ import SearchBox from './SearchBox'
 import ShowGame from './ShowGame'
 import { Link } from 'react-router-dom'
 import NewGame from './NewGame'
-
+import Navbar from './Navbar'
 
 const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     
-
     const results = searchResults.map((game, index) => (
     <div className="col-lg-6 mb-3" key={index}>
         <Link to={`/games/${index}`} className="text-reset text-decoration-none">
@@ -19,9 +18,11 @@ const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     const content = results?.length ? results : <h4>Sorry, we couldn't any matching games!</h4>
 
     return (
-        <div className="container">
+        <>
+        <Navbar />
+        <div className="container" style={{ backgroundColor: "#212529" }}>
             <div className="mt-2 d-flex justify-content-between">
-                <h1>Games</h1>
+                <h1 className="text-warning">Games</h1>
                 <SearchBox games={games} setSearchResults={setSearchResults}/>    
                 <NewGame addGame={addGame} />
             </div>
@@ -29,6 +30,7 @@ const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
                 {content}
             </main>
         </div>
+        </>
     )
 }
 

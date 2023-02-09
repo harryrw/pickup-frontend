@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import ShowCourt from './ShowCourt'
 import CourtStateSelector from './CourtStateSelector'
 import NewCourt from './NewCourt'
+import Navbar from './Navbar'
 
 const AllCourts = ({ courts, addCourt }) => {
   const [filteredCourts, setFilteredCourts] = useState([])
@@ -22,9 +23,10 @@ const AllCourts = ({ courts, addCourt }) => {
 
   return (
     <>
-    <div className="container-lg bg-light d-md-flex flex-column flex-wrap align-items-center pt-2" >
-      <div className="container-lg d-flex flex-row justify-content-around bg-light">
-        <h2>{title}</h2>
+    <Navbar />
+    <div className="container-lg d-md-flex flex-column flex-wrap align-items-center pt-2 " >
+      <div className="container-lg d-flex flex-row justify-content-around" >
+        <h2 className="text-warning">{title}</h2>
         <CourtStateSelector />
         <NewCourt addCourt={addCourt}/>
       </div>
