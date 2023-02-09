@@ -23,7 +23,7 @@ const ShowGameSingle = ({ game }) => {
           setParticipants(game.participants + 1)
           setIsClicked(true)
         }
-        game(title, address, city, state, time, date, skillLevel, description)
+        game(title, address, city, state, time, date, skillLevel, description, participants)
   }
 
     return (
@@ -52,7 +52,7 @@ const ShowGameSingle = ({ game }) => {
                 Date: {dateOrder}
               </p>
               <p className="card-text" style={{ padding: "0.5rem" }}>
-                Participants: {participants}
+                Participants: {game.participants}
               </p>
               {!isClicked ? (
                 <button onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
