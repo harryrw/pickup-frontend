@@ -103,7 +103,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Hero  />}/>
         <Route path="/games" element={<GameSearch games={games} addGame={addGame} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
