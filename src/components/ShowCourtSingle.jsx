@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from './Navbar'
   
-const ShowCourt = ({ court }) => {
+const ShowCourtSingle = ({ court }) => {
   return (
     <>
+    <Navbar />
     <div className="card min-w-75 m-3 text-warning bg-dark" style={{ maxWidth: "540px" }}>
       <div className="card-body">
         <h5 className="card-title">{court.name}</h5>
@@ -14,4 +16,4 @@ const ShowCourt = ({ court }) => {
   )
 }
 
-export default ShowCourt
+export default ShowCourtSingle
