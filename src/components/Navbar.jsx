@@ -13,18 +13,15 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav" style={{display: "flex", justifyContent: "space-evenly", width: "100%"}}>
             <li className="nav-item">
-              <Link className="nav-link text-warning" to="/games" style={{backgroundColor: "#333333", padding: "10px 20px", border: "2px solid #ffc107", borderRadius: "20px", boxShadow: "2px 2px 10px #333"}} >
+              <Link className="nav-link text-warning" to="/games" style={{backgroundColor: "#333333", padding: "10px 20px", border: "2px solid #ffc107", borderRadius: "20px"}} >
                 Games
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-warning" to="/courts" style={{backgroundColor: "#333333", padding: "10px 20px", border: "2px solid #ffc107", borderRadius: "20px", boxShadow: "2px 2px 10px #333"}}>
+              <Link className="nav-link text-warning" to="/courts" style={{backgroundColor: "#333333", padding: "10px 20px", border: "2px solid #ffc107", borderRadius: "20px"}}>
                 Courts
               </Link>
             </li>
-            {/* <li style={{ float: "right" }}>
-              <img src="src/assets/basketball-orange.svg" alt="PickUp logo" style={{ width: "50px", height: "50px" }} />
-            </li> */}
           </ul>
         </div>
       </div>
