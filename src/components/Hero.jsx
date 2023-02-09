@@ -14,10 +14,10 @@ const Hero = () => {
           Click below to find games or courts in your area.
         </p>
         <div style={{ display: 'flex', justifyContent: 'space-around', width: '60%', marginTop: '30px' }}>
-          <Link className="text-warning" to="/games" style={{ backgroundColor: '#333333', padding: '1rem 2rem', fontSize: '2rem', borderRadius: '10px', color: 'white', border: '2px solid #ffc107', textDecoration: "none" }}>
+          <Link className="text-warning" to="/games" style={{ backgroundColor: '#383F45', padding: '1rem 2rem', fontSize: '2rem', borderRadius: '10px', color: 'white', border: '2px solid #ffc107', textDecoration: "none" }}>
             Games
           </Link>
-          <Link className="text-warning" to="/courts" style={{ backgroundColor: '#333333', padding: '1rem 2rem', fontSize: '2rem', borderRadius: '10px', color: 'white', border: '2px solid #ffc107', textDecoration: "none"}}>
+          <Link className="text-warning" to="/courts" style={{ backgroundColor: '#383F45', padding: '1rem 2rem', fontSize: '2rem', borderRadius: '10px', color: 'white', border: '2px solid #ffc107', textDecoration: "none"}}>
             Courts
           </Link>
         </div>
