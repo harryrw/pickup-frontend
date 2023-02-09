@@ -13,6 +13,9 @@ const ShowGameSingle = ({ game }) => {
     const skillLevel = useState(game.skillLevel)
     const description= useState(game.description)
 
+    const gameDate = game.date.substring(0, 10).split("-")
+    const dateOrder = `${gameDate[2]}-${gameDate[1]}-${gameDate[0]}`
+
 
   function updateCount(event) {
       event.preventDefault()
@@ -26,7 +29,7 @@ const ShowGameSingle = ({ game }) => {
     return (
       <>
       <Navbar />
-      <div className="game-card-container" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh", fontSize:"3rem", zIndex: "2", paddingTop: "150px", paddingBottom: "150px" }}>
+      <div className="game-card-container" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh", fontSize:"3rem", zIndex: "2", paddingTop: "320px" }}>
         <div className="card mb-3 text-warning bg-dark" style={{ border: "2px solid #ffc107", borderRadius: "20px" }}>
           <div className="row g-0">
             <div className="col-md-6">
@@ -38,9 +41,15 @@ const ShowGameSingle = ({ game }) => {
                 </p>
               </div>
             </div>
-            <div className="col-md-6" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <p style={{paddingTop: "1rem"}}>
+            <div className="col-md-6" style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingBottom: "1rem" }}>
+              <p style={{paddingTop: "1rem", paddingRight: "1rem"}}>
                   {game.description}
+              </p>
+              <p>
+               Time: {game.time}
+              </p>
+              <p>
+                Date: {dateOrder}
               </p>
               <p className="card-text" style={{ padding: "0.5rem" }}>
                 Participants: {participants}
