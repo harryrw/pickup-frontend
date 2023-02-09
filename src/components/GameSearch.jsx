@@ -20,7 +20,7 @@ const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     return (
         <>
         <Navbar />
-        <div className="container" style={{ backgroundColor: "rgb(26, 26, 26)" }}>
+        <div className="container" style={{ backgroundColor: "#212529" }}>
             <div className="mt-2 d-flex justify-content-between">
                 <h1>Games</h1>
                 <SearchBox games={games} setSearchResults={setSearchResults}/>    
