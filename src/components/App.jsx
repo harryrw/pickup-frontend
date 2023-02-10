@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, useParams } from 'react-router-dom'
-import Navbar from './Navbar'
 import Hero from './Hero'
 import AllCourts from './AllCourts'
-import ShowCourt from './ShowCourt'
 import GameSearch from './GameSearch'
-import Admin from './Admin'
 import ShowGameSingle from './ShowGameSingle'
 import ShowCourtSingle from './ShowCourtSingle'
 
@@ -112,7 +109,6 @@ const App = () => {
         <Route path="/courts" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
-        <Route path="/admin" element={<Admin />}/>
       </Routes>
     </>
   )
