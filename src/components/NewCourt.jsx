@@ -13,8 +13,8 @@ const NewCourt = ({ addCourt }) => {
         addCourt(name, address, city, state, description)
         alert('Court successfully submitted!')
     }
-    
-    
+
+
     return (
     <div>
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">Add a new court</button>
