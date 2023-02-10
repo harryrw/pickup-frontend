@@ -73,6 +73,8 @@ The following is a link to our trello board:
 
 ### [Trello Board](https://trello.com/b/GObk5Xc6/pickup)
 
+### [Trello Progress](https://github.com/harryrw/pickup-frontend/tree/main/docs/trello-pics)
+
 ---
 
 ## Project Task Delegation
@@ -85,12 +87,14 @@ Task delegation was determined and discussed in our morning meetings. Being a gr
 
 User production testing was conducted both in the intial development of the application, and after the application had been deployed. As features were developed, the developers would then test the flow to ensure it worked as intended and within a logical sense. Several issues were identified during this process, like the 'state' not being passed through, or certain components not displaying correctly (either in mobile view or desktop).
 
+### [User Testing](https://github.com/harryrw/pickup-frontend/tree/main/docs/app-pics)
+
 ---
 
 ## User Development Testing
 
 As the API was being devloped, user testing was conducted using the API platform -  Postman. Postman allows the developer to conduct API testing by sending HTTP requests to the API, and receive the relative requests from it. Status codes and error messages were used to identify any issues with the API. Several issues were resolved using the Postman platform, and the API was tested using Postman throughout the development of the application. The following is a link to the Postman collection: 
 
-### [Postman Collection]()
+### [Postman Collection](https://github.com/harryrw/pickup-frontend/tree/main/docs/postman-pics)
 
 ---
