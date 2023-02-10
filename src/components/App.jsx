@@ -47,8 +47,8 @@ const App = () => {
 
   // HOC - for game
   const ShowGameWrapper = () => {
-    const { id } = useParams()
-    const the_game = games[id]
+    const { _id } = useParams()
+    const the_game = games.find(game => game._id === _id)
     return the_game ? <ShowGameSingle game={the_game}/> : <h4>Sorry, we can't find that game!</h4>
   }
 
@@ -104,11 +104,10 @@ const App = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Hero  />}/>
         <Route path="/games" element={<GameSearch games={games} addGame={addGame} searchResults={searchResults} setSearchResults={setSearchResults} />}/>
-        <Route path="/games/:id" element={<ShowGameWrapper/>}/>
+        <Route path="/games/:_id" element={<ShowGameWrapper/>}/>
         <Route path="/courts" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/state/:state" element={<AllCourts courts={courts} addCourt={addCourt} />}/>
         <Route path="/courts/:id" element={<ShowCourtWrapper />}/>
