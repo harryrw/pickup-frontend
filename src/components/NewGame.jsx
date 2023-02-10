@@ -85,7 +85,7 @@ const NewGame = ({ addGame }) => {
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary" onClick={submit} data-bs-dismiss="modal">Register game</button>
+                <button type="button" className="btn btn-warning" onClick={submit} data-bs-dismiss="modal">Register game</button>
             </div>
             </div>
         </div>

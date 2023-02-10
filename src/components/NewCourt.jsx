@@ -65,7 +65,7 @@ const NewCourt = ({ addCourt }) => {
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" className="btn btn-primary" onClick={submit} data-bs-dismiss="modal">Register court</button>
+                <button type="submit" className="btn btn-warning" onClick={submit} data-bs-dismiss="modal">Register court</button>
             </div>
             </div>
         </div>
