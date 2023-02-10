@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="col-md-6 w-100 h-100">
       <div className="h-100 p-5 text-warning bg-dark text-center flex-column" style={{ display: 'flex', alignItems: 'center' }}>
         <h1>Pick Up</h1>
-        <img src="./src/assets/hoophero.png" alt="Basketball court at sunset" style={{ borderRadius: '15px', width: '75%', height: '75%', objectFit: 'cover' }} />
+        <img src="../src/assets/hoophero.png" alt="Basketball court at sunset" style={{ borderRadius: '15px', width: '75%', height: '75%', objectFit: 'cover' }} />
         <p style={{fontSize: "2rem"}}>
           <br></br>
           Looking to play local basketball games but don't know where to get started?
