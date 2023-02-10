@@ -83,6 +83,8 @@ Task delegation was determined and discussed in our morning meetings. Being a gr
 
 ## User Production Testing
 
+User production testing was conducted both in the intial development of the application, and after the application had been deployed. As features were developed, the developers would then test the flow to ensure it worked as intended and within a logical sense. Several issues were identified during this process, like the 'state' not being passed through, or certain components not displaying correctly (either in mobile view or desktop). 
+
 ---
 
 ## User Development Testing
