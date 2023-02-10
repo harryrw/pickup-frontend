@@ -15,8 +15,7 @@ const App = () => {
 
   useEffect(() => {
     async function fetchCourts() {
-      const res = await fetch("http://localhost:4001/courts/")
-      // const res = await fetch('https://pickup-api-production.up.railway.app/courts')
+      const res = await fetch('https://pickup-api-production.up.railway.app/courts')
       const data = await res.json()
       setCourts(data)
     }
@@ -25,8 +24,7 @@ const App = () => {
  
   useEffect(() => {
     async function fetchGames() {
-      const res = await fetch("http://localhost:4001/games/")
-      // const res = await fetch('https://pickup-api-production.up.railway.app/games')
+      const res = await fetch('https://pickup-api-production.up.railway.app/games')
       const data = await res.json()
       setGames(data)
       setSearchResults(data)
@@ -59,8 +57,7 @@ const App = () => {
       description: description
     }
     // Post new court to DB
-    const returnedCourt = await fetch("http://localhost:4001/courts/", {
-    // const returnedCourt = await fetch("https://pickup-api-production.up.railway.app/courts/", {
+    const returnedCourt = await fetch("https://pickup-api-production.up.railway.app/courts/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -86,8 +83,7 @@ const App = () => {
     }
 
     // Post new game to DB
-    const returnedGame = await fetch("http://localhost:4001/games/", {
-    // const returnedGame = await fetch("https://pickup-api-production.up.railway.app/games/", {
+    const returnedGame = await fetch("https://pickup-api-production.up.railway.app/games/", {
       method: "POST",
       headers: {
         Accept: "application/json",
