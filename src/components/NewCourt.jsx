@@ -12,7 +12,6 @@ const NewCourt = ({ addCourt }) => {
         console.log("Submitting form with values:", name, address, city, state, description)
         addCourt(name, address, city, state, description)
         alert('Court successfully submitted!')
-        window.location.href = '/courts'
     }
     
     
