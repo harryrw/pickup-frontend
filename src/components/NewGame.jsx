@@ -14,7 +14,7 @@ const NewGame = ({ addGame }) => {
         evt.preventDefault()
         console.log("Submitting form with values:", title, address, city, state, time, date, skillLevel, description)
         addGame(title, address, city, state, time, date, skillLevel, description)
-        alert('Court successfully submitted!')
+        alert('Game successfully submitted!')
     }
 
     return (
