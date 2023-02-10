@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 
 
 const ShowGame = ({ game }) => {
-
+    
+    // Date formatting
     const gameDate = game.date.substring(0, 10).split("-")
     const dateOrder = `${gameDate[2]}-${gameDate[1]}-${gameDate[0]}`
 

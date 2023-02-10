@@ -10,6 +10,7 @@ const NewGame = ({ addGame }) => {
     const [skillLevel, setSkillLevel] = useState('any')
     const [description, setDescription] = useState('')
 
+    // New game submission function
     function submit(evt) {
         evt.preventDefault()
         console.log("Submitting form with values:", title, address, city, state, time, date, skillLevel, description)

@@ -3,7 +3,8 @@ import React from 'react'
 const SearchBox = ({ games, setSearchResults}) => {
   const handleSubmit = (e) => e.preventDefault()
 
-  const handleSeachChange = (e) => {
+  // Search games function
+  const handleSearchChange = (e) => {
     if (!e.target.value) return setSearchResults(games)
     const lowercaseValue = e.target.value.toLowerCase()
     const gameSearchResultsArray = games.filter(game => 
@@ -21,7 +22,7 @@ const SearchBox = ({ games, setSearchResults}) => {
         type="text" 
         id="game-search" 
         className="form-control me-1 mr-auto-2" 
-        onChange={handleSeachChange}
+        onChange={handleSearchChange}
         aria-describedby="game-search" 
         placeholder="Enter text to filter games (i.e. 'VIC', or 'practice')" 
         />

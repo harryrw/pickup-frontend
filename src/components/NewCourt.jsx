@@ -7,6 +7,7 @@ const NewCourt = ({ addCourt }) => {
     const [state, setState] = useState('')
     const [description, setDescription] = useState('')
     
+    // New court submission function
     function submit(evt) {
         evt.preventDefault()
         console.log("Submitting form with values:", name, address, city, state, description)

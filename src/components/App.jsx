@@ -13,6 +13,8 @@ const App = () => {
   const [searchResults, setSearchResults] = useState([])
 
 
+
+  // Fetch and store courts
   useEffect(() => {
     async function fetchCourts() {
       const res = await fetch('https://pickup-api-production.up.railway.app/courts')
@@ -22,6 +24,7 @@ const App = () => {
     fetchCourts()
   }, [])
  
+  // Fetch and store games
   useEffect(() => {
     async function fetchGames() {
       const res = await fetch('https://pickup-api-production.up.railway.app/games')

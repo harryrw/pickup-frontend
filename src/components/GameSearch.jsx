@@ -7,6 +7,7 @@ import Navbar from './Navbar'
 
 const SearchGames = ({ games, addGame, searchResults, setSearchResults }) => {
     
+    // Games search function
     const results = searchResults.map((game, index) => (
     <div className="col-lg-6 mb-3" key={index}>
         <Link to={`/games/${game._id}`} className="text-reset text-decoration-none">

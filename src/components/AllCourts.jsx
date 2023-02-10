@@ -10,6 +10,7 @@ const AllCourts = ({ courts, addCourt }) => {
   const { state } = useParams()
   const [title, setTitle] = useState("All Courts")
 
+  // Filter courts by State function
   useEffect(() => {
     const lowerCaseState = state ? state.toLowerCase() : state
     if (lowerCaseState) {

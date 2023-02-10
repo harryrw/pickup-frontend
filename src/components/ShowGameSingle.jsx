@@ -16,7 +16,7 @@ const ShowGameSingle = ({ game }) => {
     const gameDate = game.date.substring(0, 10).split("-")
     const dateOrder = `${gameDate[2]}-${gameDate[1]}-${gameDate[0]}`
 
-
+  // Update game participants
   function updateCount(event) {
       event.preventDefault()
       if (!isClicked) {
