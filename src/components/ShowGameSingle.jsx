@@ -22,7 +22,7 @@ const ShowGameSingle = ({ game }) => {
     if (!isClicked) {
       setParticipants(participants + 1) // increment local state counter
       setIsClicked(true)
-      fetch(`http://localhost:4001/games/${game._id}`, { // update MongoDB participants count
+      fetch(`https://pickup-api-production.up.railway.app/games/${game._id}`, { // update MongoDB participants count
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -33,7 +33,7 @@ const ShowGameSingle = ({ game }) => {
       })
         .then(response => response.json())
         .then(data => {
-          fetch(`http://localhost:4001/games/${game._id}`)
+          fetch(`https://pickup-api-production.up.railway.app/games/${game._id}`)
             .then(response => response.json())
             .then(data => {
               // set state with updated game data
