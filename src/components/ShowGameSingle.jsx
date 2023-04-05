@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 
 const ShowGameSingle = ({ game }) => {
@@ -18,13 +18,38 @@ const ShowGameSingle = ({ game }) => {
 
   // Update game participants
   function updateCount(event) {
-      event.preventDefault()
-      if (!isClicked) {
-          setParticipants(game.participants + 1)
-          setIsClicked(true)
-        }
-        game(title, address, city, state, time, date, skillLevel, description, participants)
+    event.preventDefault()
+    if (!isClicked) {
+      setParticipants(participants + 1) // increment local state counter
+      setIsClicked(true)
+      fetch(`http://localhost:4001/games/${game._id}`, { // update MongoDB participants count
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          participants: game.participants + 1
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          fetch(`http://localhost:4001/games/${game._id}`)
+            .then(response => response.json())
+            .then(data => {
+              // set state with updated game data
+              setParticipants(data.participants)
+            })
+            .catch(error => {
+              console.error(error)
+            })
+          console.log("Success:", data)
+        })
+        .catch(error => {
+          console.error(error)
+        })  
+    }
   }
+
 
     return (
       <>
@@ -52,7 +77,7 @@ const ShowGameSingle = ({ game }) => {
                 Date: {dateOrder}
               </p>
               <p className="card-text" style={{ padding: "0.5rem" }}>
-                Participants: {game.participants}
+                Participants: {participants}
               </p>
               {!isClicked ? (
                 <button onClick={updateCount} href="#" className="btn btn-primary text-dark bg-warning border-secondary">
